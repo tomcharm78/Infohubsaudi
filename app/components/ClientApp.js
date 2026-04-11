@@ -464,7 +464,7 @@ setInvestors(p=>[...p,nw]);setSelected(nw);setEditSection("profile");}} style={{
             <button onClick={checkDuplicates} style={{...T.btnO,padding:"5px 12px",fontSize:11}}><AlertTriangle size={12}/> Duplicates</button>
             <button onClick={()=>
               {setSelectMode(!selectMode);setSelectedIds(new Set());}} style={{...T.btnO,padding:"5px 12px",fontSize:11,background:selectMode?"#E8F5EE":"#fff"}}>
-              {selectMode ? <CheckSquare size={12}/> : <Square size={12}/>} {selectMode ? "Cancel" : "Select"}</button>
+              {selectMode && <CheckSquare size={12}/>}{!selectMode && <Square size={12}/>} {selectMode ? "Cancel" : "Select"}</button>
             {selectMode&&<span><button onClick={()=>
               {selectedIds.size===filtered.length?setSelectedIds(new Set()):setSelectedIds(new Set(filtered.map(i=>i.id)));}} style={{...T.btnO,padding:"5px 12px",fontSize:11}}>
               {selectedIds.size===filtered.length?"Deselect":"All"}</button>
@@ -484,15 +484,12 @@ setInvestors(p=>[...p,nw]);setSelected(nw);setEditSection("profile");}} style={{
             const gradBg = isG ? "linear-gradient(135deg,#1B7A4A,#2D9E64)" : "linear-gradient(135deg,#4A4A8C,#6366f1)";
             const regionBg = isG ? "#E8F5EE" : "#EAEAF7";
             const regionColor = isG ? "#1B7A4A" : "#4A4A8C";
-            const aumDisplay = fuzzy
-              ? <div style={{background:"#F4F4F5",color:"#D6E4DB",fontSize:12,fontWeight:700,padding:"3px 8px",borderRadius:6,filter:"blur(4px)",userSelect:"none"}}>{inv.aum || "N/A"}</div>
-              : <div>
-                  <div style={{background:"#E8F5EE",color:"#1B7A4A",fontSize:12,fontWeight:700,padding:"3px 8px",borderRadius:6}}>{inv.aum || "N/A"}</div>
-                  {a > 0 && <div style={{color:"#B5A167",fontSize:9,fontWeight:600,marginTop:2}}>{fmtSAR(a)}</div>}
-                </div>;
-            const editLabel = fuzzy
-              ? <span><Lock size={10}/> Locked</span>
-              : <span><Pencil size={10}/> Edit <ChevronRight size={13}/></span>;
+           const aumBlurred = <div style={{background:"#F4F4F5",color:"#D6E4DB",fontSize:12,fontWeight:700,padding:"3px 8px",borderRadius:6,filter:"blur(4px)",userSelect:"none"}}>{inv.aum || "N/A"}</div>;
+            const aumVisible = <div><div style={{background:"#E8F5EE",color:"#1B7A4A",fontSize:12,fontWeight:700,padding:"3px 8px",borderRadius:6}}>{inv.aum || "N/A"}</div>{a > 0 && <div style={{color:"#B5A167",fontSize:9,fontWeight:600,marginTop:2}}>{fmtSAR(a)}</div>}</div>;
+            const aumDisplay = fuzzy ? aumBlurred : aumVisible;
+           const editLabel = fuzzy
+              ? <span>Locked</span>
+              : <span>Edit</span>;
             return (
             <div key={inv.id}
               onClick={() => {
