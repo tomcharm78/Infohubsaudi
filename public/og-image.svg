@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" style="stop-color:#0D3D24"/>
+      <stop offset="100%" style="stop-color:#1B7A4A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="0" y="590" width="1200" height="40" fill="#B5A167"/>
+  <rect x="80" y="80" width="80" height="80" rx="16" fill="rgba(255,255,255,0.15)"/>
+  <text x="120" y="138" font-family="serif" font-size="48" font-weight="bold" fill="#D4C68E" text-anchor="middle">H</text>
+  <text x="180" y="110" font-family="serif" font-size="28" font-weight="bold" fill="white">Healthcare Investor Intelligence</text>
+  <text x="180" y="145" font-family="sans-serif" font-size="14" fill="#D4C68E" letter-spacing="3">GCC · SAUDI ARABIA · VISION 2030</text>
+  <text x="80" y="240" font-family="sans-serif" font-size="42" font-weight="bold" fill="white">The #1 Platform for Healthcare</text>
+  <text x="80" y="295" font-family="sans-serif" font-size="42" font-weight="bold" fill="#D4C68E">Investment in Saudi Arabia</text>
+  <text x="80" y="360" font-family="sans-serif" font-size="18" fill="rgba(255,255,255,0.7)">400+ Investors · 18,000+ Providers · AI Advisor · Deal Flow · Interactive Map</text>
+  <rect x="80" y="420" width="220" height="50" rx="10" fill="#B5A167"/>
+  <text x="190" y="452" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1A2E23" text-anchor="middle">Start Free →</text>
+  <text x="80" y="540" font-family="sans-serif" font-size="13" fill="rgba(255,255,255,0.4)">MISA · MOH · SFDA · SIDF · MODON · Monsha'at · ZATCA · SCFHS · NUPCO · CCHI</text>
+  <text x="80" y="565" font-family="sans-serif" font-size="12" fill="rgba(255,255,255,0.3)">Tadawul: Al Habib · Dallah · Mouwasat · Al Hammadi · Saudi German · Almoosa · Nahdi · SPIMACO · NUPCO</text>
+</svg>

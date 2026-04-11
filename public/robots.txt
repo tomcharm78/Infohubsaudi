@@ -1,0 +1,11 @@
+# Healthcare Investor Intelligence Platform
+# https://healthbridge-gcc.vercel.app
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /api/admin-ops
+Disallow: /api/ai-update
+Disallow: /api/payment
+
+Sitemap: https://healthbridge-gcc.vercel.app/sitemap.xml

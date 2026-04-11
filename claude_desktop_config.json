@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "healthcare-platform": {
+      "command": "node",
+      "args": ["mcp-server.js"],
+      "env": {
+        "PLATFORM_URL": "https://YOUR-APP.vercel.app",
+        "ADMIN_OPS_KEY": "YOUR-SECRET-KEY-HERE"
+      }
+    }
+  }
+}
