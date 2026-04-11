@@ -1,7 +1,7 @@
 "use client";
 import dynamic from 'next/dynamic';
 
-const ClientApp = dynamic(() => import('./components/ClientApp_minimal'), {
+const ClientApp = dynamic(() => import('./components/ClientApp'), {
   ssr: false,
   loading: () => (
     <div style={{minHeight:"100vh",display:"flex",alignItems:"center",justifyContent:"center",background:"#F4F6F5"}}>
